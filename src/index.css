@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/valorant');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 0 100% 64%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 100% 64%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 100% 64%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 100% 64%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-valorant-black text-valorant-white font-inter antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(255, 70, 85, 0.1) 0%, transparent 80%),
+      linear-gradient(to bottom, rgba(255, 70, 85, 0.05) 0%, transparent 100%);
+    background-attachment: fixed;
+  }
+}
+
+.glass-card {
+  @apply bg-black/30 backdrop-blur-md border border-white/10 rounded-lg shadow-lg;
+}
+
+.valorant-title {
+  @apply font-valorant text-valorant-red tracking-wider;
+}
