@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:80"  # Porta local mapeada para a porta padrão do container
+    environment:
+      - NODE_ENV=production
+
